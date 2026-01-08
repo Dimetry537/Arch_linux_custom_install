@@ -1,0 +1,13 @@
+- name: Создать пользователя
+  user:
+    name: "{{ username }}"
+    groups: wheel
+    shell: /bin/zsh
+    create_home: yes
+    password: "{{ user_password | password_hash('sha512') }}"
+
+- name: Включить sudo для wheel
+  lineinfile:
+    path: /etc/sudoers
+    regexp: "^# %wheel"
+    line: "%wheel ALL=(ALL:ALL) ALL"

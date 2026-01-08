@@ -1,0 +1,9 @@
+- name: Установить PipeWire и аудио компоненты
+  pacman:
+    name:
+      - pipewire
+      - pipewire-pulse
+      - pipewire-alsa
+      - wireplumber
+      - plasma-pa
+    state: present

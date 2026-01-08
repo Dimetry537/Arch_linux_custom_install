@@ -1,0 +1,13 @@
+- name: Установить KDE Plasma и базовые приложения
+  pacman:
+    name:
+      - plasma-desktop
+      - sddm
+      - konsole
+      - dolphin
+    state: present
+
+- name: Включить SDDM
+  systemd:
+    name: sddm
+    enabled: true

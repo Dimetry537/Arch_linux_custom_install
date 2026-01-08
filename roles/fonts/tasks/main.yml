@@ -1,0 +1,12 @@
+- name: Установить системные шрифты
+  pacman:
+    name:
+      - noto-fonts
+      - noto-fonts-cjk
+      - noto-fonts-emoji
+      - ttf-liberation
+      - ttf-dejavu
+    state: present
+
+- name: Обновить кэш шрифтов
+  command: fc-cache -fv

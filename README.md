@@ -1,5 +1,29 @@
 # Полная инструкция по установке Arch Linux с KDE Plasma
 
+Полный сценарий установки (пошагово)
+1️⃣ Загрузись с Arch Linux ISO
+
+UEFI режим
+
+Подключись к интернету:
+
+iwctl # если Wi-Fi
+
+Проверь:
+
+ping -c 3 archlinux.org
+
+2️⃣ Склонируй репозиторий
+pacman -Sy git
+git clone https://github.com/ТВОЙ_РЕПОЗИТОРИЙ.git
+cd Arch_linux_custom_install
+
+3️⃣ Запусти основной скрипт
+chmod +x arch-install.sh bootstrap.sh
+./arch-install.sh
+
+⚠️ Только arch-install.sh, он сам вызовет bootstrap.sh.
+
 Инструкция для установки Arch Linux на ноутбук с UEFI, KDE Plasma и базовой настройкой системы.
 
 ## Требования

@@ -1,0 +1,6 @@
+- name: Установить KDE NetworkManager апплет
+  pacman:
+    name:
+      - networkmanager-qt
+      - plasma-nm
+    state: present

@@ -1,0 +1,16 @@
+- name: Отключить восстановление сессии KDE
+  copy:
+    dest: "/home/{{ username }}/.config/ksmserverrc"
+    content: |
+      [General]
+      loginMode=emptySession
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: "0644"
+
+- name: Установить KWallet PAM
+  pacman:
+    name:
+      - kwallet-pam
+      - kwalletmanager
+    state: present

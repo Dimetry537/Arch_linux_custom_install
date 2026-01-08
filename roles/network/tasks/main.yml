@@ -1,0 +1,9 @@
+- name: Установить NetworkManager
+  pacman:
+    name: networkmanager
+    state: present
+
+- name: Включить NetworkManager
+  systemd:
+    name: NetworkManager
+    enabled: true

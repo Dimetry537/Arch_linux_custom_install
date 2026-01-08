@@ -1,0 +1,10 @@
+roles:
+  - base
+  - network
+  - users
+  - grub
+  - kde
+  - sound
+  - network_gui
+  - fonts
+  - postinstall
